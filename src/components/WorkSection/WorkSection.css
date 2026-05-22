@@ -1,0 +1,90 @@
+.work-section {
+  padding: 0 52px 120px;
+  background: var(--bg);
+}
+
+.work-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  margin-bottom: 32px;
+  border-bottom: 0.5px solid var(--border);
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.work-label {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.25);
+  white-space: nowrap;
+  padding-top: 6px;
+}
+
+/* FILTER BAR */
+.filter-bar {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  padding: 5px 14px;
+  border-radius: 100px;
+  border: 0.5px solid rgba(255,255,255,.12);
+  background: transparent;
+  color: rgba(255,255,255,.35);
+  cursor: none;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+.filter-btn:hover { border-color: var(--orange); color: rgba(255,255,255,.9); }
+.filter-btn.active { background: var(--orange); color: #fff; border-color: var(--orange); }
+
+/* CARDS GRID */
+.cards-grid {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  gap: 24px;
+  overflow-x: auto;
+  overflow-y: visible;
+  padding: 0 52px 32px;
+  margin: 0 -52px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.cards-grid::-webkit-scrollbar { display: none; }
+
+@media (max-width: 1024px) {
+  .work-section { padding: 0 32px 80px; }
+  .cards-grid { padding: 0 32px 32px; margin: 0 -32px; }
+}
+
+@media (max-width: 768px) {
+  .work-section { padding: 0 24px 80px; }
+  .work-header { flex-direction: column; gap: 12px; }
+  .filter-bar {
+    width: 100%;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding-bottom: 4px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .filter-bar::-webkit-scrollbar { display: none; }
+  .filter-btn { flex-shrink: 0; font-size: 11px; padding: 5px 12px; }
+  .cards-grid { padding: 0 24px 28px; margin: 0 -24px; }
+}
+
+@media (max-width: 480px) {
+  .work-section { padding: 0 16px 60px; }
+  .cards-grid { padding: 0 16px 24px; margin: 0 -16px; }
+}

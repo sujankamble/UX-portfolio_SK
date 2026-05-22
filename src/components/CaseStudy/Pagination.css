@@ -1,0 +1,33 @@
+.cs-pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 16px;
+  padding-top: 48px;
+  margin-top: 48px;
+  border-top: 0.5px solid var(--border);
+}
+
+.cs-pag-btn {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-decoration: none;
+  padding: 20px 24px;
+  border-radius: 12px;
+  border: 0.5px solid var(--border);
+  background: var(--surface2);
+  transition: all 0.2s;
+  cursor: none;
+  flex: 1;
+  max-width: 280px;
+}
+.cs-pag-btn:hover { border-color: rgba(255,255,255,.2); background: var(--surface); }
+.cs-pag-btn-next { text-align: right; margin-left: auto; }
+.pag-dir { font-size: 10px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink3); }
+.pag-name { font-size: 14px; font-weight: 500; color: var(--ink); }
+
+@media (max-width: 768px) {
+  .cs-pagination { flex-direction: column; }
+  .cs-pag-btn { max-width: 100%; }
+}

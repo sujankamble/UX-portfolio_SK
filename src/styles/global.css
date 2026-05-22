@@ -1,0 +1,67 @@
+/* ── RESET & BASE ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── DESIGN TOKENS ── */
+:root {
+  --bg:       #0a0608;
+  --surface:  #141014;
+  --surface2: #1a1018;
+  --ink:      rgba(255,255,255,0.92);
+  --ink2:     rgba(255,255,255,0.6);
+  --ink3:     rgba(255,255,255,0.35);
+  --ink4:     rgba(255,255,255,0.18);
+  --border:   rgba(255,255,255,0.07);
+  --orange:   #FF6B35;
+
+  /* Project accent colours */
+  --banking:  #811c81;
+  --banking2: #9b2d9b;
+  --audit:    #3a8a26;
+  --nocode:   #e69138;
+  --mes:      #0070c0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  overflow-x: hidden;
+  cursor: none;
+}
+
+/* ── SCROLL REVEAL ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+.d1 { transition-delay: 0.05s; }
+.d2 { transition-delay: 0.12s; }
+.d3 { transition-delay: 0.19s; }
+.d4 { transition-delay: 0.26s; }
+.d5 { transition-delay: 0.33s; }
+
+/* ── KEYFRAMES ── */
+@keyframes fadeUp {
+  to { opacity: 1; transform: none; }
+}
+@keyframes scanline {
+  0%   { left: -100%; }
+  100% { left: 100%; }
+}
+@keyframes arcSpin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
