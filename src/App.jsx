@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { HashRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import { PasswordProvider } from './context/PasswordContext.jsx';
 import Cursor from './components/Cursor/Cursor.jsx';
@@ -30,12 +30,12 @@ function AnimatedRoutes() {
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <PasswordProvider>
         <Cursor />
         <Nav />
         <AnimatedRoutes />
       </PasswordProvider>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
